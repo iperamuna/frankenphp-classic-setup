@@ -1,3 +1,5 @@
+![FrankenPHP Hero Image](images/frankenphp-hero-header.png)
+
 # Supercharge Your PHP Apps: The Ultimate Guide to FrankenPHP Classic Mode with Nginx
 
 **By Indunil Peramuna**
