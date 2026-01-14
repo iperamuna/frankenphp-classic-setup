@@ -34,6 +34,13 @@ confirm() {
   [[ "${ans,,}" == "y" || "${ans,,}" == "yes" ]]
 }
 
+confirm_default_yes() {
+  local msg="$1"
+  local ans=""
+  read -r -p "$msg [Y/n]: " ans
+  [[ -z "$ans" || "${ans,,}" == "y" || "${ans,,}" == "yes" ]]
+}
+
 ensure_dir() { mkdir -p "$1"; }
 
 open_editor() {

@@ -22,13 +22,13 @@ main() {
   info "Setup FrankenPHP Classic Mode"
   echo "--------------------------------------------"
 
-  step_frankenphp_install
-  step_user
-  step_app
-  step_phpini
-  step_systemd
-  step_cli_wrapper
-  step_nginx
+  confirm_default_yes "Install FrankenPHP" && step_frankenphp_install
+  confirm_default_yes "Configure Run User" && step_user
+  confirm_default_yes "Configure Application" && step_app
+  confirm_default_yes "Configure PHP settings" && step_phpini
+  confirm_default_yes "Setup Systemd Service" && step_systemd
+  confirm_default_yes "Create CLI Wrapper" && step_cli_wrapper
+  confirm_default_yes "Configure Nginx" && step_nginx
   step_summary
 }
 
