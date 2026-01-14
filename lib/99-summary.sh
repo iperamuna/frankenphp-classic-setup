@@ -13,6 +13,6 @@ step_summary() {
   echo "PHP overrides:  ${PHP_OVERRIDES_FILE}"
   echo
   echo "Tip: Laravel artisan with FrankenPHP:"
-  echo "  /usr/local/bin/frankenphp php-cli artisan list"
+  echo "  ${FRANKENPHP_BIN} php-cli artisan list"
   echo
 }

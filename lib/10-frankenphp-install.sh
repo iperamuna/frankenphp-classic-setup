@@ -16,7 +16,9 @@ step_frankenphp_install() {
     default_fp="$(command -v frankenphp)"
   fi
 
-  prompt FRANKENPHP_SRC "1) FrankenPHP executable path (copied to ${FRANKENPHP_BIN})" "$default_fp"
+  prompt FRANKENPHP_BIN "Destination path for FrankenPHP binary" "$FRANKENPHP_BIN"
+
+  prompt FRANKENPHP_SRC "Source FrankenPHP executable path" "$default_fp"
   [[ -f "$FRANKENPHP_SRC" ]] || die "File not found: $FRANKENPHP_SRC"
   [[ -x "$FRANKENPHP_SRC" ]] || warn "Not executable; will chmod +x"
 
